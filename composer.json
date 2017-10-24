@@ -1,0 +1,24 @@
+{
+	"name": "richbarrett/itagg-sdk-php",
+	"homepage": "https://github.com/richbarrett7/itagg-sdk-php",
+	"description": "PHP SDK for the iTagg SMS service",
+	"license": "MIT",
+	"keywords": ["itagg","sdk","php","sms","api"],
+  "version": "1.0",
+	"authors": [
+	{
+		"name": "Richard Barrett",
+		"email": "rbarrett1@gmail.com"
+	}
+	],
+	"require": {
+      "nategood/httpful": "^0.2.20",
+      "php": ">=5.6.0"
+  },
+	"autoload": {
+		"classmap": [
+		"src/itagg.php",
+		"src/send.php"
+		]
+	}
+}
