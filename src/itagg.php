@@ -2,8 +2,6 @@
 
 namespace richbarrett\itagg;
 
-include_once(__DIR__.'/../vendor/autoload.php');
-
 class itagg {
   
   var $endpoint = '';
@@ -11,6 +9,7 @@ class itagg {
   var $password = '';
   var $parameters = array();
   var $requestTimeout = 5;
+  var $debug = false;
   
   function __construct($user, $password) {
     $this->user = $user;
@@ -36,6 +35,11 @@ class itagg {
     $request->sendsType(\Httpful\Mime::FORM);
 
     // Parse the response
+    if($this->debug) {
+      print_r($request);
+      exit;
+    }
+    
     $response = $request->send();
     return $this->parseResponse($response);
     

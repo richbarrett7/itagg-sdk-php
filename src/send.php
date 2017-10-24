@@ -2,8 +2,6 @@
 
 namespace richbarrett\itagg;
 
-include_once(__DIR__.'/itagg.php');
-
 class send extends \richbarrett\itagg\itagg {
   
   var $endpoint = 'https://secure.itagg.com/smsg/sms.mes';
